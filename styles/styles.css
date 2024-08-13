@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -41,6 +42,7 @@ body {
     color: #fff;
 }
 
+/* Hero Section for Desktop */
 .hero {
     display: flex;
     align-items: center;
@@ -50,10 +52,11 @@ body {
 
 .text-content {
     flex: 1;
+    max-width: 600px;
 }
 
 .text-content h1 {
-    font-size: 48px;
+    font-size: 56px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -64,7 +67,7 @@ body {
 }
 
 .text-content p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 40px;
 }
 
@@ -105,8 +108,8 @@ body {
 }
 
 .image-content {
-    position: relative;
     flex: 1;
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -142,4 +145,90 @@ body {
 
 .overlay span {
     font-size: 14px;
+}
+
+/* Mobile (Up to 767px) */
+@media screen and (max-width: 767px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 32px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-content {
+        margin-top: 20px;
+    }
+
+    .overlay {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .overlay span {
+        font-size: 12px;
+    }
+}
+
+/* Tablet Screen (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .text-content {
+        grid-column: 1 / 2;
+    }
+
+    .image-content {
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .free-videos {
+        top: 10px;
+        right: 10px;
+    }
+
+    .video-tutorials {
+        bottom: 10px;
+        left: 10px;
+    }
 }
