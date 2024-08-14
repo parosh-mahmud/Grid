@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -42,7 +41,6 @@ body {
     color: #fff;
 }
 
-/* Hero Section for Desktop */
 .hero {
     display: flex;
     align-items: center;
@@ -122,32 +120,58 @@ body {
 
 .overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    font-size: 10px;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: auto;
 }
 
-.free-videos {
-    top: 20px;
-    right: 20px;
+.overlay.free-videos {
+    width: 110px;
+    white-space: nowrap;
+    top: 50%;
+    right: 60%;
+    transform: translateY(-50%);
 }
 
-.video-tutorials {
-    bottom: 20px;
-    left: 20px;
+.overlay.video-tutorials {
+    height: 50px;
+    line-height: 30px;
+    padding: 0 6px;
+    bottom: 15%;
+    left: 60%;
+    transform: translateY(15%);
 }
 
 .overlay span {
-    font-size: 14px;
+    font-size: 10px;
 }
 
-/* Mobile (Up to 767px) */
+.overlay:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}
+
+.free-videos {
+    top: 15%;
+    right: 10%;
+    transform: translateY(-15%);
+}
+
+.video-tutorials {
+    bottom: 15%;
+    left: 10%;
+    transform: translateY(15%);
+}
+
 @media screen and (max-width: 767px) {
     .hero {
         flex-direction: column;
@@ -182,7 +206,6 @@ body {
     }
 }
 
-/* Tablet Screen (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .hero {
         display: grid;
@@ -233,7 +256,6 @@ body {
     }
 }
 
-/* Change Your Habits Section */
 .habits-section {
     padding: 60px 40px;
     background-color: #1a1a1a;
@@ -309,7 +331,6 @@ body {
     border-radius: 10px;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .habits-grid {
         flex-direction: column;
@@ -338,7 +359,6 @@ body {
     }
 }
 
-/* Tablet Screen (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .habits-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -360,7 +380,6 @@ body {
     }
 }
 
-/* Trainings and Exercises Section */
 .trainings-section {
     padding: 60px 40px;
     background-color: #1a1a1a;
@@ -388,7 +407,6 @@ body {
 .training {
     position: relative;
     overflow: hidden;
-    /* Ensure no borders show */
 }
 
 .training img {
@@ -408,7 +426,6 @@ body {
     border-radius: 5px;
 }
 
-/* Specific grid placements for different sizes */
 .trainings-grid .training:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -439,7 +456,6 @@ body {
     grid-row: 2 / 3;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .trainings-grid {
         grid-template-columns: 1fr;
@@ -455,7 +471,6 @@ body {
     }
 }
 
-/* Tablet Screen (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .trainings-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -493,7 +508,6 @@ body {
     }
 }
 
-/* BMI Section */
 .bmi-section {
     padding: 60px 40px;
     background-color: #1a1a1a;
@@ -513,10 +527,8 @@ body {
 
 .bmi-container {
     background-color: #333;
-    /* Set the same background color for the container */
     padding: 20px;
     border-radius: 10px;
-    /* Optional: Add border-radius for smoother corners */
 }
 
 .bmi-grid {
@@ -532,7 +544,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: inherit;
-    /* Inherit background from container */
     padding: 20px;
 }
 
@@ -602,7 +613,6 @@ body {
     background-color: #e04d2b;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .bmi-grid {
         grid-template-columns: 1fr;
@@ -613,7 +623,6 @@ body {
     }
 }
 
-/* Tablet Screen (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .bmi-section {
         padding: 40px 20px;
@@ -624,7 +633,6 @@ body {
     }
 }
 
-/* Team Section */
 .team-section {
     padding: 60px 40px;
     background-color: #1a1a1a;
@@ -652,7 +660,6 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    
 }
 
 .team-member img {
@@ -661,8 +668,6 @@ body {
     display: block;
     border-radius: 10px;
 }
-
-
 
 .overlay h3 {
     font-size: 20px;
@@ -674,7 +679,6 @@ body {
     margin: 5px 0 0;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .team-grid {
         grid-template-columns: 1fr;
@@ -682,7 +686,6 @@ body {
     }
 }
 
-/* Tablet Screen (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -690,7 +693,6 @@ body {
     }
 }
 
-/* Footer Section */
 .footer-section {
     background-color: #1a1a1a;
     color: #fff;
@@ -761,7 +763,6 @@ body {
     margin: 0;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .footer-content {
         flex-direction: column;
@@ -780,7 +781,6 @@ body {
     }
 }
 
-/* Tablet Screen (768px to 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .footer-content {
         flex-direction: column;
@@ -799,7 +799,6 @@ body {
     }
 }
 
-/* Menu toggle button for mobile screens */
 .menu-toggle {
     display: none;
     background-color: #ff5533;
@@ -811,7 +810,6 @@ body {
     border-radius: 5px;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .menu-toggle {
         display: block;
@@ -862,7 +860,6 @@ body {
     cursor: pointer;
 }
 
-/* Mobile (Up to 767px) */
 @media screen and (max-width: 767px) {
     .close-menu {
         display: block;
